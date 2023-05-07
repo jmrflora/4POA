@@ -3,6 +3,12 @@ package br.com.faeterj.teste;
 import br.com.faeterj.Aluno;
 import java.io.*;
 
+/* alunos:
+ * José Matheus Flora
+ * Pedro lopez
+ * Lucas Brienzo
+ * Brenda
+ */
 public class Teste {
 
 	public static void main(String[] args) {

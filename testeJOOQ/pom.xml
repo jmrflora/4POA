@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>br.com</groupId>
+  <artifactId>teste</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+	<dependency>
+	  <groupId>org.jooq</groupId>
+	  <artifactId>jooq</artifactId>
+	  <version>3.18.3</version>
+	</dependency>
+	
+	<!-- These may not be required, unless you use the GenerationTool manually for code generation -->
+	<dependency>
+	  <groupId>org.jooq</groupId>
+	  <artifactId>jooq-meta</artifactId>
+	  <version>3.18.3</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.jooq</groupId>
+	  <artifactId>jooq-codegen</artifactId>
+	  <version>3.18.3</version>
+	</dependency>
+  </dependencies>
+  <build>
+	  <plugins>
+		  <plugin>
+			  <!-- Specify the maven code generator plugin -->
+			  <!-- Use org.jooq                for the Open Source Edition
+			  org.jooq.pro            for commercial editions with Java 17 support, 
+			  org.jooq.pro-java-11    for commercial editions with Java 11 support,
+			  org.jooq.pro-java-8     for commercial editions with Java 8 support,
+			  org.jooq.trial          for the free trial edition with Java 17 support, 
+			  org.jooq.trial-java-11  for the free trial edition with Java 11 support, 
+			  org.jooq.trial-java-8   for the free trial edition with Java 8 support 
+         
+       			Note: Only the Open Source Edition is hosted on Maven Central. 
+             	Import the others manually from your distribution -->
+			  <groupId>org.jooq</groupId>
+			  <artifactId>jooq-codegen-maven</artifactId>
+			  <version>3.18.3</version>
+			
+			  <executions>
+			    <execution>
+			      <id>jooq-codegen</id>
+			      <phase>generate-sources</phase>
+			      <goals>
+			        <goal>generate</goal>
+			      </goals>
+			    </execution>
+			  </executions>
+			
+			  <configuration>
+			    
+			  </configuration>
+		  </plugin>
+	  </plugins>
+  </build>
+</project>
