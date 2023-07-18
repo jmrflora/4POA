@@ -45,6 +45,7 @@ public class RequisicaoDogApi extends HttpServlet {
 		ImageIO.write(dog.getImg(), "jpg", baos);
 		String base64Image = Base64.getEncoder().encodeToString(baos.toByteArray());
 		
+		//a conversão não está funcionando no momento então estou mandando o diretório direto
 		request.setAttribute("teste", dar.getMessage());
 		request.setAttribute("imagem", base64Image);
 		request.setAttribute("nome", dog.getNome());
